@@ -12,12 +12,12 @@
 
 $EM_CONF[$_EXTKEY] = array (
 	'title' => 'Foundation 5',
-	'description' => 'Allows you to use responsive content elements with output conditions. 
-	- Optional libraries as static templates.	
+	'description' => 'Allows you to use responsive content elements with output conditions.
+	- Optional libraries as static templates.
 	- Configurations possible on Constants.',
 	'category' => 'misc',
 	'shy' => false,
-	'version' => '0.2.8',
+	'version' => '0.3.0',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
@@ -34,19 +34,19 @@ $EM_CONF[$_EXTKEY] = array (
 	'author_company' => '',
 	'CGLcompliance' => NULL,
 	'CGLcompliance_note' => NULL,
-	'constraints' => 
+	'constraints' =>
 	array (
-		'depends' => 
+		'depends' =>
 		array (
 			'cms' => '',
 			'version' => '',
 			'php' => '5.3.3-0.0.0',
-			'typo3' => '4.7.0-6.1.99',
+			'typo3' => '4.7.0-6.2.99',
 		),
-		'conflicts' => 
+		'conflicts' =>
 		array (
 		),
-		'suggests' => 
+		'suggests' =>
 		array (
 		),
 	),

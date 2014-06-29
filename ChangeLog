@@ -1,3 +1,12 @@
-2014-01-29  Detlef Fluess  <fluess@2-ad.de>
+0.3.0
+  2014-06-29
+  Dirk Wildt (Die Netzmacher), http://wildt.at.die-netzmacher.de/
+  Feature
+  * #59983: Update for TYPO3 6.2
+            Effected files
+            * ext_emconf.php
 
-	* Initial code generated with kickstarter
+0.0.1
+  2014-01-29
+  Initial Release
+  * Detlef Fluess  <fluess@2-ad.de>
