@@ -1,0 +1,254 @@
+tt_content.stdWrap.innerWrap.cObject.default.20.110 = COA
+tt_content.stdWrap.innerWrap.cObject.default.20.110 {
+  10 = TEXT
+  10.field = tx_dffoundation5_class
+  10.noTrimWrap = | ||
+  10.required = 1
+  20 = TEXT
+  20.field = tx_dffoundation5_show_for
+  20.noTrimWrap = | ||
+  20.required = 1
+  30 = TEXT
+  30.field = tx_dffoundation5_hide_for
+  30.noTrimWrap = | ||
+  30.required = 1
+  40 = TEXT
+  40.field = tx_dffoundation5_format
+  40.noTrimWrap = | ||
+  40.required = 1
+  50 = TEXT
+  50.field = tx_dffoundation5_touch
+  50.noTrimWrap = | ||
+  50.required = 1
+  60 = TEXT
+  60.field = tx_dffoundation5_print
+  60.noTrimWrap = | ||
+  60.required = 1
+}
+
+tt_content.stdWrap.innerWrap.cObject.default.10.cObject.default.innerWrap = |style="{field:tx_dffoundation5_style}"
+tt_content.stdWrap.innerWrap.cObject.default.10.cObject.default.innerWrap.if.isTrue.field =tx_dffoundation5_style
+tt_content.stdWrap.innerWrap.cObject.default.10.cObject.default.innerWrap.required = 1
+
+temp.imgRendering = <ul class="large-block-grid-{field:imagecols} medium-block-grid-{field:imagecols} small-block-grid-1 csc-textpic">|</ul>
+temp.imgRendering.override = <ul class="large-block-grid-{field:imagecols} medium-block-grid-{field:tx_dffoundation5_medium_block_grid} small-block-grid-{field:tx_dffoundation5_small_block_grid} csc-textpic imgblock">|</ul>
+temp.imgRendering.override.if {
+	value = 1
+	isGreaterThan.data = register:imageCount
+}
+
+tt_content.image.20.addClassesImage = csc-textpic-first |*| csc-textpic-next |*| csc-textpic-last
+tt_content.image.20.addClassesCol.override = csc-textpic-firstcol |*| csc-textpic-nextcol |*| csc-textpic-lastcol
+tt_content.image.20.rendering {
+
+  splitCaption {
+    rowStdWrap >
+    noRowsStdWrap >
+    lastRowStdWrap >
+		columnStdWrap.wrap = <li class="splitCaption###CLASSES###">|</li>
+  }
+	
+  singleCaption {
+    allStdWrap >      
+    allStdWrap.dataWrap < temp.imgRendering
+    columnStdWrap.wrap = <li class="singleCaption###CLASSES###">|</li>
+  }
+	
+  globalCaption {
+    rowStdWrap >
+    noRowsStdWrap >
+    lastRowStdWrap >   
+    allStdWrap >      
+    allStdWrap.dataWrap < temp.imgRendering
+    columnStdWrap.wrap = <li class="globalCaption###CLASSES###">|</li>      
+  }
+	
+  singleNoCaption {
+    rowStdWrap >
+    noRowsStdWrap >
+    lastRowStdWrap >         
+    allStdWrap >
+    allStdWrap.dataWrap < temp.imgRendering
+    columnStdWrap.wrap = <li class="singleNoCaption###CLASSES###">|</li>
+  }
+	
+  noCaption {
+    rowStdWrap >
+    noRowsStdWrap >
+    lastRowStdWrap >      
+    allStdWrap >
+    allStdWrap.dataWrap < temp.imgRendering
+    columnStdWrap.wrap = <li class="noCaption###CLASSES###">|</li>
+  }
+	
+}
+
+tt_content.image.20.layout {
+  
+  # mittig oben
+  0 = TEXT
+  0.value = <div class="row"><div class="large-12 columns text-center bild-oben###CLASSES###">###IMAGES###</div><div class="large-12 columns text-center text-unten">###TEXT###</div></div>  
+
+  # rechts oben
+  1 = TEXT
+  1.value = <div class="row"><div class="large-12 columns text-right bild-oben###CLASSES###">###IMAGES###</div><div class="large-12 columns text-right text-unten">###TEXT###</div></div>  
+
+  # links oben
+  2 = TEXT
+  2.value = <div class="row"><div class="large-12 columns text-left bild-oben###CLASSES###">###IMAGES###</div><div class="large-12 columns text-left text-unten">###TEXT###</div></div>  
+
+  # mittig unten
+  8 = TEXT
+  8.value = <div class="row"><div class="large-12 columns text-center text-oben">###TEXT###</div><div class="large-12 columns text-center bild-unten###CLASSES###">###IMAGES###</div></div>  
+  
+  # rechts unten
+  9 = TEXT
+  9.value = <div class="row"><div class="large-12 columns text-right text-oben">###TEXT###</div><div class="large-12 columns text-right bild-unten###CLASSES###">###IMAGES###</div></div>  
+
+  # links unten
+  10 = TEXT
+  10.value = <div class="row"><div class="large-12 columns text-left text-oben">###TEXT###</div><div class="large-12 columns text-left bild-unten###CLASSES###">###IMAGES###</div></div>  
+
+  #Bild Links 
+  30 = TEXT
+  30.value = <div class="row"><div class="large-{field:tx_dffoundation5_large_left_column} medium-{field:tx_dffoundation5_medium_left_column} small-{field:tx_dffoundation5_small_left_column} {field:tx_dffoundation5_left_add} columns cl bild-links###CLASSES###">###IMAGES###</div><div class="large-{field:tx_dffoundation5_large_right_column} medium-{field:tx_dffoundation5_medium_right_column} small-{field:tx_dffoundation5_small_right_column} {field:tx_dffoundation5_right_add} columns text-rechts cr">###TEXT###</div></div>  
+	30.insertData = 1
+	
+  #Bild rechts 
+  31 = TEXT
+  31.value = <div class="row"><div class="large-{field:tx_dffoundation5_large_left_column} medium-{field:tx_dffoundation5_medium_left_column} small-{field:tx_dffoundation5_small_left_column} {field:tx_dffoundation5_left_add} columns cl text-links">###TEXT###</div><div class="large-{field:tx_dffoundation5_large_right_column} medium-{field:tx_dffoundation5_medium_right_column} small-{field:tx_dffoundation5_small_right_column} {field:tx_dffoundation5_right_add} columns cr bild-rechts###CLASSES###">###IMAGES###</div></div>
+	31.insertData = 1
+	
+  #Bild voll
+  32 = TEXT
+  32.value = <div class="row"><div class="large-12 columns###CLASSES###">###IMAGES###</div></div>  
+}
+
+###########################################################
+# Neue Rahmentypen 
+###########################################################
+
+tt_content.stdWrap.innerWrap.cObject {
+
+  # Dropdown Content
+  100 =< tt_content.stdWrap.innerWrap.cObject.default
+  100 {
+		10.cObject.default.value (
+		<a href="#" class="{$dropDownLinkType} {$dropDownButtonSize} {$dropDownButtonColor} {$dropDownButtonCorner}" data-dropdown="drop{field:uid}">{field:header}</a>
+		<div id="drop{field:uid}" data-dropdown-content
+		)
+  	20.10.value = f-dropdown content {$dropDownBoxSize}
+  	30.cObject.default.value = >|</div>
+	}
+	
+  # Hover Dropdown Content
+  101 =< tt_content.stdWrap.innerWrap.cObject.default
+  101 {
+		10.cObject.default.value (
+		<a href="#" class="{$dropDownLinkType} {$dropDownButtonSize} {$dropDownButtonColor} {$dropDownButtonCorner}" data-dropdown="hover{field:uid}" data-options="is_hover:true">{field:header}</a>
+		<div id="hover{field:uid}" data-dropdown-content
+		)
+  	20.10.value = f-dropdown content {$dropDownBoxSize}
+  	30.cObject.default.value = >|</div>
+	}  	
+  
+  # Modalbox Reval
+  110 =< tt_content.stdWrap.innerWrap.cObject.default
+  110 {
+		10.cObject.default.value (
+  	<a href="#" class="{$modalBoxLinkType} {$modalBoxButtonSize} {$modalBoxButtonColor} {$modalBoxButtonCorner}" data-reveal-id="modal{field:uid}" data-reveal>{field:header}</a>
+  	<div id="modal{field:uid}"
+  	)
+  	20.10.value = reveal-modal {$modalBoxSize}
+  	30.cObject.default.value = data-reveal>|<a class="close-reveal-modal">&#215;</a></div>
+	}
+}
+
+# TYPO3 Standard-Rahmen anpassen
+tt_content.stdWrap.innerWrap.cObject {
+	20.20.10.value = csc-frame csc-frame-frame1 panel radius
+	21.20.10.value = csc-frame csc-frame-frame2 panel callout radius
+}
+
+
+###########################################################
+config.doctype = html5
+page.meta {
+  viewport = width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0
+}
+###########################################################
+[browser = msie] && [version= <7]
+config.htmlTag_setParams = class="no-js lt-ie9 lt-ie8 lt-ie7" lang="de"
+[global]
+[browser = msie] && [version= 7]
+config.htmlTag_setParams = class="no-js lt-ie9 lt-ie8" lang="de"
+[global]
+[browser = msie] && [version= 8]
+config.htmlTag_setParams = class="no-js lt-ie9" lang="de"
+[global]
+
+###########################################################
+## Header Scripte
+###########################################################
+page.includeCSS {
+  normalize = {$foundationPath}css/normalize.css
+  foundation = {$foundationPath}css/foundation.min.css
+	dfstyles = EXT:df_foundation5/res/css/styles.css
+}
+
+page.includeJSlibs {
+	jquery = {$jqueryPath}
+	jquery.forceOnTop = 1
+  modernizr = {$foundationPath}js/vendor/modernizr.js
+	modernizr.forceOnTop = 2
+}
+
+page.includeJSFooterlibs {
+	fastclick 				= {$foundationPath}js/vendor/fastclick.js
+	foundationmin     = {$foundationPath}js/foundation.min.js
+	
+# Then include either foundation.min.js, which includes Foundation Core and all JavaScript plugins 
+# or you can load them individually here. 
+
+#  foundation     = {$foundationPath}js/foundation/foundation.js
+#  topbar         = {$foundationPath}js/foundation/foundation.topbar.js
+#  cookie         = {$foundationPath}js/foundation/foundation.cookie.js
+#  dropdown       = {$foundationPath}js/foundation/foundation.dropdown.js
+#  forms          = {$foundationPath}js/foundation/foundation.forms.js
+#  abide          = {$foundationPath}js/foundation/foundation.abide.js  
+#  alerts         = {$foundationPath}js/foundation/foundation.alerts.js
+#  placeholder    = {$foundationPath}js/foundation/foundation.placeholder.js
+#  reval          = {$foundationPath}js/foundation/foundation.reveal.js
+#  clearing       = {$foundationPath}js/foundation/foundation.clearing.js
+#  interchange    = {$foundationPath}js/foundation/foundation.interchange.js
+#  joyride        = {$foundationPath}js/foundation/foundation.joyride.js
+#  magellan       = {$foundationPath}js/foundation/foundation.magellan.js
+#  sections       = {$foundationPath}js/foundation/foundation.section.js
+#  tooltips       = {$foundationPath}js/foundation/foundation.tooltips.js
+#  orbit          = {$foundationPath}js/foundation/foundation.orbit.js
+}
+
+page.includeJSFooter {
+    foundation = EXT:df_foundation5/res/foundation.js
+}
+
+###########################################################
+## Seitentyp 11 | Reval Modal
+# Beispiel:
+# <a href="#" data-reveal-id="popup" data-reveal-ajax="index.php?id=123&amp;type=11"> Modalbox </a>
+# <div id="popup" class="reveal-modal" data-reveal></div>
+## 
+###########################################################
+popup = PAGE
+popup.typeNum = 11
+popup.config {
+	disableAllHeaderCode = 1
+	disableCharsetHeader = 1
+	enableContentLengthHeader = 0
+	no_cache = 1
+	admPanel = 0	
+	xhtml_cleaning	 >
+}	
+popup.10 < styles.content.get
+popup.10.stdWrap.wrap = |<a class="close-reveal-modal">&#215;</a>
+

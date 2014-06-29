@@ -1,0 +1,14 @@
+	#cat=foundation off-canvas navigation/cheader/b01; type=string; label=off-canvas Title for Small
+	off-canvas.smallTitle = Menu Top-Label
+	
+	#cat=foundation off-canvas navigation/cheader/b01; type=string; label=off-canvas top Label for Small	
+	off-canvas.topLabel = Menu
+
+	#cat=foundation off-canvas navigation/links/b02; type=int; label=off-canvas Entry Level
+	off-canvas.entryLevel = 1
+
+	#cat=foundation off-canvas navigation/clist/b03; type=string; label=off-canvas Exclude UID List
+	off-canvas.excludeUidList =
+
+	#cat=foundation off-canvas navigation/enable/b04; type=options[left,right]; label=off-canvas position.
+	off-canvas.position = left

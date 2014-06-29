@@ -1,0 +1,154 @@
+#############################
+# lib.interchange
+#############################
+page.includeJSFooterlibs {
+  interchange = EXT:df_foundation5/res/js/interchange.js
+}
+temp.interchange = COA
+temp.interchange {
+  1 = TEXT
+  1.value = <figure class="csc-textpic-image###CLASSES###"><img data-interchange="
+
+# xxsmall
+########################################################################################	
+  30 = IMG_RESOURCE
+  30 {
+    file {
+			import.current = 1
+  	  maxW.cObject = TEXT
+			maxW.cObject.value = {$df_foundation5.interchange.mediaQuerie-xxsmall.img.maxW}
+	    maxW.cObject.dataWrap = |/{field:tx_dffoundation5_small_block_grid}
+	    maxW.cObject.importData = 1
+  	  maxW.prioriCalc = intval
+			maxW.override.field = imagewidth
+			maxH.override.field = imageheight
+		}
+    stdWrap.noTrimWrap = |[|, (my_xxsmall)], |
+  }			
+
+# xsmall
+########################################################################################	
+  40 = IMG_RESOURCE
+  40 {
+    file {
+			import.current = 1
+  	  maxW.cObject = TEXT
+			maxW.cObject.value = {$df_foundation5.interchange.mediaQuerie-xsmall.img.maxW}
+	    maxW.cObject.dataWrap = |/{field:tx_dffoundation5_small_block_grid}
+	    maxW.cObject.importData = 1
+  	  maxW.prioriCalc = intval
+			maxW.override.field = imagewidth
+			maxH.override.field = imageheight
+		}
+    stdWrap.noTrimWrap = |[|, (my_xsmall)], |
+  }		
+
+# small
+########################################################################################	
+  50 = IMG_RESOURCE
+  50 {
+    file {
+			import.current = 1
+  	  maxW.cObject = TEXT
+			maxW.cObject.value = {$df_foundation5.interchange.mediaQuerie-small.img.maxW}
+	    maxW.cObject.dataWrap = |/{field:tx_dffoundation5_small_block_grid}
+	    maxW.cObject.importData = 1
+  	  maxW.prioriCalc = intval
+			maxW.override.field = imagewidth
+			maxH.override.field = imageheight
+		}
+    stdWrap.noTrimWrap = |[|, (my_small)], |
+  }	
+		
+# smedium
+########################################################################################
+	60 = IMG_RESOURCE
+ 	60 {
+    file {
+			import.current = 1
+  	  maxW.cObject = TEXT
+			maxW.cObject.value = {$df_foundation5.interchange.mediaQuerie-smedium.img.maxW}
+	    maxW.cObject.dataWrap = |/{field:tx_dffoundation5_small_block_grid}
+	    maxW.cObject.importData = 1
+  	  maxW.prioriCalc = intval
+			maxW.override.field = imagewidth
+			maxH.override.field = imageheight
+		}
+    stdWrap.noTrimWrap = |[|, (my_smedium)], |
+  }			
+
+# medium
+########################################################################################
+	70 = IMG_RESOURCE
+ 	70 {
+    file {
+			import.current = 1
+  	  maxW.cObject = TEXT
+			maxW.cObject.value = {$df_foundation5.interchange.mediaQuerie-medium.img.maxW}
+	    maxW.cObject.dataWrap = |/{field:tx_dffoundation5_medium_block_grid}
+	    maxW.cObject.importData = 1
+  	  maxW.prioriCalc = intval
+			maxW.override.field = imagewidth
+			maxH.override.field = imageheight
+		}
+    stdWrap.noTrimWrap = |[|, (my_medium)], |
+  }			
+	
+# large
+########################################################################################
+	80 = IMG_RESOURCE
+ 	80 {
+    file {
+			import.current = 1		
+  	  maxW.cObject = TEXT
+			maxW.cObject.value = {$styles.content.imgtext.maxW}
+	    maxW.cObject.dataWrap = |/{field:imagecols}
+  	  maxW.prioriCalc = intval
+			maxW.override.field = imagewidth
+			maxH.override.field = imageheight
+		}
+		stdWrap.noTrimWrap = |[|, (my_large)], |
+  }		
+	
+  100 = TEXT
+  100.value = "></figure>###CAPTION###
+  110 = TEXT
+  110.value = <noscript><figure class="csc-textpic-image###CLASSES###">|</figure>###CAPTION###</noscript>
+}
+
+tt_content.image.20 {
+  rendering {
+    singleNoCaption {
+      singleStdWrap.wrap.override.cObject < temp.interchange
+    }
+    noCaption {
+      singleStdWrap.wrap.override.cObject < temp.interchange
+    }
+    singleCaption {
+      singleStdWrap.wrap.override.cObject < temp.interchange
+    }
+    splitCaption {
+      singleStdWrap.wrap.override.cObject < temp.interchange
+    }
+    globalCaption {
+      singleStdWrap.wrap.override.cObject < temp.interchange
+    }
+  }
+}
+
+page.footerData.2012 = TEXT
+page.footerData.2012.value (
+<script>
+jQuery(document).foundation('interchange', {
+	named_queries: {
+		my_xxsmall:'only screen and (min-width:1px)',
+		my_xsmall:'only screen and (min-width:{$df_foundation5.interchange.mediaQuerie-xsmall.trigger.minW}px)',
+		my_small:'only screen and (min-width:{$df_foundation5.interchange.mediaQuerie-small.trigger.minW}px)',
+		my_smedium:'only screen and (min-width:{$df_foundation5.interchange.mediaQuerie-smedium.trigger.minW}px)',
+		my_medium:'only screen and (min-width:{$df_foundation5.interchange.mediaQuerie-medium.trigger.minW}px)',
+		my_large:'only screen and (min-width:{$df_foundation5.interchange.mediaQuerie-large.trigger.minW}px)'
+	}
+});
+</script>
+)
+

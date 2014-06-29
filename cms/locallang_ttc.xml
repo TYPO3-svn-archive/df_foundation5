@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+	<data type="array">
+		<languageKey index="de" type="array">
+			<label index="imageorient">Position:</label>
+			<label index="imageorient_formlabel">Position und Ausrichtung</label>
+			<label index="imageorient.I.30">links</label>
+			<label index="imageorient.I.31">rechts</label>
+			<label index="imageorient.I.32">voll</label>				
+		</languageKey>
+	</data>
+</T3locallangExt>

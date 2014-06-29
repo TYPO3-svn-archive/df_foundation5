@@ -1,0 +1,24 @@
+#######################################################
+# lib.dropdown-nav
+#######################################################
+lib.dropdown-nav = HMENU
+lib.dropdown-nav {
+  special = list
+  special.value = {$dropdown-nav.uidlist}
+  1 = TMENU
+  1 {
+    noBlur = 1
+    stdWrap.dataWrap (
+    <a href="#" data-dropdown="drop{field:uid}" data-options="is_hover:{$dropdown-nav.is_hover};" class="{$dropdown-nav.linktype} {$dropdown-nav.linksize} {$dropdown-nav.ButtonColor} {$dropdown-nav.ButtonCorner}">{$dropdown-nav.title}</a>
+    <ul id="drop{field:uid}" class="f-dropdown {$dropdown-nav.boxsize}" data-dropdown-content">|</ul>
+    )
+    NO = 1
+    NO {
+      ATagTitle.field =
+      wrapItemAndSub = <li>|</li>
+    }      
+    ACT < .NO
+    ACT = 1
+    ACT.wrapItemAndSub = <li class="active">|</li>
+  }
+}

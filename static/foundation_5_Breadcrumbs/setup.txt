@@ -1,0 +1,28 @@
+
+#############################
+# lib.breadcrumbs
+#############################
+lib.breadcrumbs = HMENU
+lib.breadcrumbs {
+ 	special = rootline
+	special.range = {$breadcrumbs.range}	
+  entryLevel = {$breadcrumbs.entryLevel}
+  wrap = <nav class="breadcrumbs">|</nav>
+  1 = TMENU
+  1 {
+    noBlur = 1
+    NO = 1
+    NO {   
+      ATagTitle.field = abstract // subtitle
+			allWrap = |
+			stdWrap.htmlSpecialChars = 1
+    }
+    CUR < .NO
+    CUR = 1
+		CUR.ATagParams = class="current" 
+  }
+}
+page.cssInline {
+	123 = TEXT
+	123.value = .breadcrumbs > *:before {content:"{$breadcrumbs.separator}";top:{$breadcrumbs.separatorpos}px;}
+}

@@ -1,0 +1,17 @@
+	#cat=foundation top-bar navigation/cheader/b01; type=string; label=top-bar Title for Small
+	top-bar.smallTitle = Menu
+
+	#cat=foundation top-bar navigation/links/b02; type=int; label=top-bar Entry Level
+	top-bar.entryLevel = 1
+
+	#cat=foundation top-bar navigation/clist/b03; type=string; label=top-bar Exclude UID List
+	top-bar.excludeUidList =
+
+	#cat=foundation top-bar navigation/enable/b04; type=options[hover=true,click=false]; label=top-bar hover:You can now make the top bar clickable.
+	top-bar.is_hover = true
+
+	#cat=foundation top-bar navigation/enable/b05; type=options[true,false]; label=Show Parent Link for Small
+	top-bar.mobileShowParentLink = true
+
+	#cat=foundation top-bar navigation/enable/b06; type=options[without=custom,fixed=fixed,grid=contain-to-grid,grind and fixed=contain-to-grid fixed]; label=Positioning the Top Bar
+	top-bar.position = contain-to-grid

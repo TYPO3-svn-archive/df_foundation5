@@ -1,0 +1,57 @@
+#############################
+# lib.top-bar
+#############################
+lib.top-bar = HMENU
+lib.top-bar {
+  stdWrap.wrap = <div class="{$top-bar.position}">|</div>
+  wrap = <nav class="top-bar" data-topbar data-options="mobile_show_parent_link:{$top-bar.mobileShowParentLink};is_hover:{$top-bar.is_hover};">|</nav>
+  excludeUidList = {$top-bar.excludeUidList}
+  entryLevel = {$top-bar.entryLevel}
+  1 = TMENU
+  1 {
+    expAll = 1
+    collapse = 0
+    noBlur = 1
+    wrap (
+    
+    <ul class="title-area">
+      <li class="name"><!-- Leave this empty --></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>{$top-bar.smallTitle}</span></a></li>
+    </ul>
+    <section class="top-bar-section"><ul>|</ul></section>
+    )
+    
+    NO = 1
+    NO {   
+      ATagTitle.field = abstract // subtitle
+			ATagParams = class="button"
+      wrapItemAndSub = <li>|</li> <li class="divider"></li>
+    }
+    
+    IFSUB = 1
+    IFSUB < .NO
+    IFSUB.wrapItemAndSub = <li class="has-dropdown">|</li> <li class="divider"></li>
+
+    ACT < .NO
+    ACT = 1
+    ACT.wrapItemAndSub = <li class="active">|</li> <li class="divider"></li>
+
+    ACTIFSUB < .NO    
+    ACTIFSUB = 1
+    ACTIFSUB.wrapItemAndSub = <li class="active has-dropdown">|</li> <li class="divider"></li>
+    
+    CUR < .NO
+    CUR = 1
+    CUR.wrapItemAndSub = <li class="current">|</li> <li class="divider"></li>
+
+    CURIFSUB < .NO    
+    CURIFSUB = 1
+    CURIFSUB.wrapItemAndSub = <li class="current has-dropdown">|</li> <li class="divider"></li>
+  }
+  
+  2 < .1
+  2.wrap = <ul class="dropdown">|</ul>
+  3 < .2
+  4 < .3
+  5 < .4
+}

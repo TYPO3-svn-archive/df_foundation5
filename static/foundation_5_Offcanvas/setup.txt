@@ -1,0 +1,60 @@
+#############################
+# lib.off-canvas
+#############################
+
+page.stdWrap.wrap (
+
+<div class="off-canvas-wrap" data-offcanvas>
+	<div class="inner-wrap">|</div>
+</div>
+)
+
+lib.off-canvas = HMENU
+lib.off-canvas {
+  wrap (
+	
+		<nav class="tab-bar">
+			<section class="{$off-canvas.position}-small">
+				<a class="{$off-canvas.position}-off-canvas-toggle menu-icon"><span></span></a>
+			</section>
+			
+			<section class="middle tab-bar-section">
+				<h1 class="title">{$off-canvas.smallTitle}</h1>
+			</section>
+		</nav>
+		
+		<aside class="{$off-canvas.position}-off-canvas-menu">
+			<ul class="off-canvas-list">
+				<li><label>{$off-canvas.topLabel}</label></li>
+				|
+			</ul>
+		</aside>
+		<a class="exit-off-canvas"></a>
+)
+
+	excludeUidList = {$off-canvas.excludeUidList}
+  entryLevel = {off-canvas.entryLevel}
+  1 = TMENU
+  1 {
+    expAll = 1
+    collapse = 0
+    noBlur = 1
+    NO = 1
+    NO {   
+      ATagTitle.field = abstract // subtitle // title
+      wrapItemAndSub = <li>|</li>
+    }
+    ACT < .NO
+    ACT = 1
+    ACT.wrapItemAndSub = <li class="active">|</li>   
+    CUR < .NO
+    CUR = 1
+    CUR.wrapItemAndSub = <li class="current">|</li>
+	}
+  2 < .1
+  3 < .2
+  4 < .3
+  5 < .4
+	6 < .5
+	7 < .6
+}

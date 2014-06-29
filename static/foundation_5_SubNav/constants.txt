@@ -1,0 +1,9 @@
+	
+	#cat=foundation sub navigation/typo/c00; type=wrap; label=sub-nav Wrap
+	sub-nav.wrap = |
+	
+	#cat=foundation sub navigation/typo/c01; type=int; label=sub-nav Entry Level
+	sub-nav.entryLevel = 2
+
+	#cat=foundation sub navigation/clist/c02; type=string; label=sub-nav Exclude UID List
+	sub-nav.excludeUidList =

@@ -1,0 +1,33 @@
+df_foundation5.interchange {
+
+	#cat=foundation Interchange/size/a00; type=int+; label=Screen minWidth trigger xsmall
+	mediaQuerie-xsmall.trigger.minW = 320
+
+	#cat=foundation Interchange/size/a01; type=int+; label=Screen minWidth trigger small
+	mediaQuerie-small.trigger.minW = 480
+	
+	#cat=foundation Interchange/size/a02; type=int+; label=Screen minWidth trigger smedium
+	mediaQuerie-smedium.trigger.minW = 600
+	
+	#cat=foundation Interchange/size/a03; type=int+; label=Screen minWidth trigger medium
+	mediaQuerie-medium.trigger.minW = 768
+	
+	#cat=foundation Interchange/size/a04; type=int+; label=Screen minWidth trigger large
+	mediaQuerie-large.trigger.minW = 1024
+	
+	
+	#cat=foundation Interchange/size/b00; type=int+; label=Image maxWidth trigger:for Screen minWidth 1px up
+	mediaQuerie-xxsmall.img.maxW = 240
+	
+	#cat=foundation Interchange/size/b00; type=int+; label=Image maxWidth for trigger xsmall
+	mediaQuerie-xsmall.img.maxW = 320
+	
+	#cat=foundation Interchange/size/b01; type=int+; label=Image maxWidth for trigger small
+	mediaQuerie-small.img.maxW = 480
+	
+	#cat=foundation Interchange/size/b02; type=int+; label=Image maxWidth for trigger smedium
+	mediaQuerie-smedium.img.maxW = 600
+	
+	#cat=foundation Interchange/size/b03; type=int+; label=Image maxWidth for trigger medium
+	mediaQuerie-medium.img.maxW = 768
+}

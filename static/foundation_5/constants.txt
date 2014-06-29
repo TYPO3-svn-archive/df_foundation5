@@ -1,0 +1,40 @@
+
+	styles.content.imgtext.maxW = 1024
+	styles.content.imgtext.maxWInText = 1024
+
+	# cat=foundation sources/file/a00; type=string; label= Path to JQuery: You can change this if you need to modify jquery.
+	jqueryPath = EXT:df_foundation5/res/foundation-5.3.0/js/vendor/jquery.js
+	
+	# cat=foundation sources/file/a01; type=string; label = Path to zurb foundation 5 Framework
+	foundationPath = EXT:df_foundation5/res/foundation-5.3.0/	
+
+	# cat=foundation frames/enable/a02; type=options[tiny,small,medium,large]; label=DropDown Size
+	dropDownBoxSize = medium
+	
+	# cat=foundation frames/enable/a03; type=options[button,dropdown-link]; label=DropDown Link Type:Button or custom class [dropdown-link]
+	dropDownLinkType = button
+
+	# cat=foundation frames/enable/a04; type=options[tiny,small,large]; label=DropDown Button-/Link-Size
+	dropDownButtonSize = 
+	
+	# cat=foundation frames/enable/a05; type=options[secondary,success,alert,disabled]; label=DropDown Button-color
+	dropDownButtonColor = 
+	
+	# cat=foundation frames/enable/a06; type=options[radius,round]; label=DropDown Button-corner
+	dropDownButtonCorner =	
+	
+
+	# cat=foundation frames/enable/a07; type=options[tiny,small,medium,large,xlarge]; label=ModalBox Size
+	modalBoxSize = medium	
+
+	# cat=foundation frames/enable/a08; type=options[button,modal-link]; label=ModalBox Link Type:Button or custom class [modal-link]
+	modalBoxLinkType = button
+
+	# cat=foundation frames/enable/a09; type=options[tiny,small,large]; label=ModalBox Button-/Link-Size
+	modalBoxButtonSize = 
+	
+	# cat=foundation frames/enable/a10; type=options[secondary,success,alert,disabled]; label=ModalBox Button-color
+	modalBoxButtonColor =
+
+	# cat=foundation frames/enable/a11; type=options[radius,round]; label=ModalBox Button-corner
+	modalBoxButtonCorner = 
